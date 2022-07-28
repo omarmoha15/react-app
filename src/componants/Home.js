@@ -8,42 +8,47 @@ function Home() {
 
     const [query,setQuery] =useState("");
     const[order,setOrder] = useState("ASC");
-    const[dataa,setDataa]= useState(Users);
+    const[data,setData]= useState(Users);
     const[toggle,setToggle] = useState("false");
 
-    const sorting = () =>{
-      const sortingData = [...dataa].sort((a,b)=>{
-        return a.first > b.first ? 1:-1
+    const sorting = ({data, byPower}) =>{
+
+      const sortingData = [...data].sort((a,b)=>{
+
+        return byPower? a.power > b.power ? 1:-1 : a.hero_name > b.hero_name ? 1:-1;
+
       })
-      setDataa(sortingData)
+      setData(sortingData)
+
     }
 
-        const toggler=()=>{
-         toggle ? setToggle(false) : setToggle(true);
+const toggler=()=>{
+         if(toggle){
+          setToggle(false)
+         } else {
+          setToggle(true)
+         }
 
+          toggle ? sorting({data: data, byPower: true}): sorting({data: data, byPower: false}) ;
         }
 
-    const search =(data) => {
+ const search =(data) => {
         return data.filter((item) => item.hero_name.toLowerCase().includes(query));
-
 
       };
   return (
     <div  className="App">
          <input type="text"
-       placeholder='search..'
-       className='search'
-       onChange={e=> setQuery(e.target.value)}
-       />
+                placeholder='search..'
+                className='search'
+                onChange={e=> setQuery(e.target.value)}
+          />
        <p>sorting by power:</p>
+
         <Switch className='switch'
           onClick={toggler}/>
-         {toggle ? <span ><Table data={search(Users)}/></span> : <span onClick={sorting} id="sort-a-z"><Table data={search(Users)}/></span> }
 
-
-
-
-
+       <Table data={search(data)}  />
 
     </div>
   )
