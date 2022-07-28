@@ -49,7 +49,7 @@ tr:nth-child(even){
 tr:nth-child(odd){
   background-color: #ddd;
 }
-.detils{
+.Details{
   display: flex;
   flex-direction: column;
   align-items: center;
