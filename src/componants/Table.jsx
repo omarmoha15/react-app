@@ -21,7 +21,7 @@ function Table({data,navigation}) {
                 {data.map((item=>
                 <tr key={item.id}>
 
-                    <td><Link to={"/detils"} state={item}>{item.hero_name}</Link></td>
+                    <td><Link to={"/detils"} state={{item}}>{item.hero_name}</Link></td>
                     <td>{item.power}</td>
                     <td>{<ReactStars/>}</td>
                 </tr>
