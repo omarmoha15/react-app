@@ -1,0 +1,59 @@
+.App {
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.search {
+  padding: 10px;
+  font-size: 20px;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 30px ;
+  margin-bottom: 40px;
+  width: 500px;
+
+
+}
+.switch{
+  margin-bottom: 30px;
+}
+
+
+.table {
+  width: 800px;
+
+}
+
+th {
+  text-align: left;
+  font-size: 20px;
+}
+
+.table,th,td{
+  border:1px solid #000;
+  border-collapse: collapse;
+
+}
+th ,td {
+  padding: 10px;
+}
+tr:nth-child(even){
+  background-color: #fff;
+}
+tr:nth-child(odd){
+  background-color: #ddd;
+}
+.image{
+
+
+  align-items: center;
+
+}
+
+.detils{
+
+  align-items: center;
+}
