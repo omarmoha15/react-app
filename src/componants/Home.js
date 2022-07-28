@@ -39,7 +39,8 @@ function Home() {
 
         <Switch className='switch'
           onClick={toggler}/>
-         {toggle ? <span ><Table data={search(Users)}/></span> : <span onClick={sorting} id="sort-a-z"><Table data={search(Users)}/></span> }
+         {toggle ? <span >hi</span> : <span >bye</span> }
+         <Table data={search(Users)}/>
 
 
 

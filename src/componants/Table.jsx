@@ -24,8 +24,8 @@ function Table({data}) {
                 {data.map((item=>
                 <tr key={item.id}>
 
-                    <td><Link className='link'  to={`/detils?id=${item.id}`} state={{ item }}>{item.hero_name}</Link></td>
-                    <td><Link className='link'  to={`/detils?id=${item.id}`} state={{ item }}>{item.power}</Link></td>
+                    <td><Link className='link'  to={`/Details?id=${item.id}`} state={{ item }}>{item.hero_name}</Link></td>
+                    <td><Link className='link'  to={`/Details?id=${item.id}`} state={{ item }}>{item.power}</Link></td>
                     <td>{<ReactStars/>}</td>
                 </tr>
                 ))}

@@ -2,7 +2,7 @@ import React from 'react'
 import './App.css';
 import Home from './componants/Home'
 import { BrowserRouter,Link , Router,Routes,NavLink, Route } from 'react-router-dom'
-import Detils from './componants/Detils'
+import Details from './componants/Details'
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
 
     <Routes>
       <Route path="/" element={<Home/>}/>
-      <Route path="/Detils" element={<Detils/>}/>
+      <Route path="/Details" element={<Details/>}/>
     </Routes>
 
 
